@@ -7,7 +7,7 @@ scrape_configs:
       - targets: ['podman:9100']
   - job_name: 'process_exporter'
     static_configs:
-      - targets: ['process-exporter:9256']
+      - targets: ['podman:9256']
 
 rule_files:
   - alert.rules
