@@ -11,4 +11,4 @@ receivers:
 - name: 'webhooks'
   webhook_configs:
   - url: 'http://podman:8084/${WEBHOOK_UUID}'
-  - url: 'http://eda-controller:5050'
+  - url: 'http://eda-controller:5050/prometheus'
