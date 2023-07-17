@@ -1,0 +1,10 @@
+groups:
+- name: httpd process example
+  rules:
+  - alert: HttpdDown
+    expr: process_cpu_seconds_total{process="httpd"} == 0
+    for: 1s
+    labels:
+      severity: page
+    annotations:
+      summary: "HTTPD server down"
