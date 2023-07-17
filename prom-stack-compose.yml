@@ -24,7 +24,7 @@ services:
       - 9093:9093
 
   webhook:
-    image: "webhooksite/webhook.site"
+    image: "docker.io/webhooksite/webhook.site:latest"
     command: php artisan queue:work --daemon --tries=3 --timeout=10
     ports:
       - "8084:80"
@@ -43,10 +43,10 @@ services:
       - redis
 
   redis:
-    image: "redis:alpine"
+    image: "docker.io/library/redis:alpine"
 
   laravel-echo-server:
-    image: "mintopia/laravel-echo-server"
+    image: "docker.io/mintopia/laravel-echo-server:latest"
     environment:
       - LARAVEL_ECHO_SERVER_AUTH_HOST=http://webhook
       - LARAVEL_ECHO_SERVER_HOST=0.0.0.0
