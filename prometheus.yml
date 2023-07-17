@@ -4,7 +4,6 @@ global:
 scrape_configs:
   - job_name: 'node_exporter'
     static_configs:
-#      - targets: ['<RHEL9_Node1_IP>:9100', '<RHEL9_Node2_IP>:9100']
       - targets: ['podman:9100']
 
 rule_files:
