@@ -17,8 +17,8 @@ services:
     user: root
     privileged: true
     volumes:
+      - ./alertmanager-startup.sh:/alertmanager-startup.sh
       - ./alertmanager.yml:/etc/alertmanager/alertmanager.yml
-    command:
-      - '--config.file=/etc/alertmanager/alertmanager.yml'
+    command: ["/bin/bash", "/alertmanager-startup.sh"]
     ports:
       - 9093:9093

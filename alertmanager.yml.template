@@ -10,4 +10,4 @@ route:
 receivers:
 - name: 'webhook.site'
   webhook_configs:
-  - url: 'http://webhook'
+  - url: 'http://podman:8084/${WEBHOOK_UUID}'
