@@ -19,6 +19,6 @@ services:
     volumes:
       - ./alertmanager-startup.sh:/alertmanager-startup.sh
       - ./alertmanager.yml.template:/alertmanager.yml.template
-    entrypoint: ["/bin/bash", "/alertmanager-startup.sh"]
+    entrypoint: ["/bin/sh", "/alertmanager-startup.sh"]
     ports:
       - 9093:9093
