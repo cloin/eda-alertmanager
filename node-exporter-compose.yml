@@ -17,16 +17,16 @@ services:
       - 9100:9100
     restart: always
     
-  process-exporter:
-    image: ncabatoff/process-exporter
-    user: root
-    priveleged: true
-    volumes:
-      - ./config.yml:/config.yml:ro
-      - /proc:/host/proc:ro
-    command:
-      - '--procfs=/host/proc'
-      - '--config.path=/config.yml'
-    ports:
-      - 9256:9256
-    restart: always
+  # process-exporter:
+  #   image: ncabatoff/process-exporter
+  #   user: root
+  #   priveleged: true
+  #   volumes:
+  #     - ./proc-export.yml:/config.yml:ro
+  #     - /proc:/host/proc:ro
+  #   command:
+  #     - '--procfs=/host/proc'
+  #     - '--config.path=/config.yml'
+  #   ports:
+  #     - 9256:9256
+  #   restart: always

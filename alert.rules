@@ -1,5 +1,5 @@
 groups:
-- name: service status and selinx
+- name: selinux status
   rules:
   - alert: selinux disabled
     expr: node_selinux_current_mode == 0
@@ -8,11 +8,3 @@ groups:
       severity: page
     annotations:
       summary: "selinx disabled"
-
-  - alert: httpdDown
-    expr: absent(up{job="httpd"})
-    for: 10s
-    labels:
-      severity: page
-    annotations:
-      summary: "httpd process is down"
