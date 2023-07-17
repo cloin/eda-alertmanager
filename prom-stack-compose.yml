@@ -1,7 +1,7 @@
 version: '3'
 services:
   prometheus:
-    image: prom/prometheus
+    image: docker.io/prom/prometheus:latest
     user: root
     privileged: true
     volumes:
@@ -13,7 +13,7 @@ services:
       - 9090:9090
   
   alertmanager:
-    image: prom/alertmanager
+    image: docker.io/prom/alertmanager:latest
     user: root
     privileged: true
     volumes:

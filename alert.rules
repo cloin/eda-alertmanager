@@ -1,10 +1,10 @@
 groups:
-- name: httpd process example
+- name: selinux example
   rules:
-  - alert: HttpdDown
-    expr: process_cpu_seconds_total{process="httpd"} == 0
+  - alert: selinux disabled
+    expr: node_selinux_current_mode == 0
     for: 1s
     labels:
       severity: page
     annotations:
-      summary: "HTTPD server down"
+      summary: "selinx disabled"
