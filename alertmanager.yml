@@ -6,8 +6,8 @@ route:
   group_wait: 10s
   group_interval: 1m
   repeat_interval: 1h
-  receiver: 'web.hook'
+  receiver: 'webhook.site'
 receivers:
-- name: 'web.hook'
+- name: 'webhook.site'
   webhook_configs:
-  - url: 'https://webhook.site/4ca0a5e9-a105-431c-820f-027331d65938'
+  - url: 'http://webhook'
