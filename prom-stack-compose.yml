@@ -11,11 +11,11 @@ services:
       - '--config.file=/etc/prometheus/prometheus.yml'
     ports:
       - 9090:9090
-  
+
   alertmanager:
     build:
       context: .
-      dockerfile: alertmanater-dockerfile
+      dockerfile: alertmanager-dockerfile
     user: root
     privileged: true
     volumes:
