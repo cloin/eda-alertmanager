@@ -10,7 +10,7 @@ alerting:
 scrape_configs:
   - job_name: 'node_exporter'
     static_configs:
-      - targets: ['podman:9100']
+      - targets: ['podman:9100', 'rhel-1:9100', 'rhel-2:9100']
   # - job_name: 'process_exporter'
   #   static_configs:
   #     - targets: ['podman:9256']
