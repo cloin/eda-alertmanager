@@ -13,7 +13,9 @@ services:
       - 9090:9090
   
   alertmanager:
-    image: docker.io/prom/alertmanager:latest
+    build:
+      context: .
+      dockerfile: alertmanater-dockerfile
     user: root
     privileged: true
     volumes:
