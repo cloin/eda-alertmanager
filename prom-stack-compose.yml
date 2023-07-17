@@ -18,7 +18,7 @@ services:
     privileged: true
     volumes:
       - ./alertmanager-startup.sh:/alertmanager-startup.sh
-      - ./alertmanager.yml:/etc/alertmanager/alertmanager.yml
+      - ./alertmanager.yml.template:/alertmanager.yml.template
     command: ["/bin/bash", "/alertmanager-startup.sh"]
     ports:
       - 9093:9093
