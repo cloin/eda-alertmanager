@@ -10,4 +10,4 @@ route:
 receivers:
 - name: 'web.hook'
   webhook_configs:
-  - url: 'https://eda-controller:5050'
+  - url: 'https://webhook.site/4ca0a5e9-a105-431c-820f-027331d65938'
