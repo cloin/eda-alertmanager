@@ -7,4 +7,4 @@ export WEBHOOK_URL=`curl -X POST -H "Content-Type: application/json" -d '{"defau
 envsubst < /alertmanager.yml.template > /etc/alertmanager/alertmanager.yml
 
 # Start Alertmanager with the generated configuration
-/alertmanager --config.file=/etc/alertmanager/alertmanager.yml
+exec /bin/alertmanager --config.file=/etc/alertmanager/alertmanager.yml
