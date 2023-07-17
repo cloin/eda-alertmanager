@@ -6,8 +6,9 @@ route:
   group_wait: 10s
   group_interval: 1m
   repeat_interval: 1h
-  receiver: 'webhook.site'
+  receiver: 'webhooks'
 receivers:
-- name: 'webhook.site'
+- name: 'webhooks'
   webhook_configs:
   - url: 'http://podman:8084/${WEBHOOK_UUID}'
+  - url: 'http://eda-controller:5050
