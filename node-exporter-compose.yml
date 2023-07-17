@@ -2,6 +2,7 @@ version: '3'
 services:
   node-exporter:
     image: prom/node-exporter
+    privileged: true
     volumes:
       - /proc:/host/proc:ro
       - /sys:/host/sys:ro
