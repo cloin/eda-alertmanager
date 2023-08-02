@@ -26,7 +26,7 @@ services:
   #     - 9093:9093
 
   alertmanager:
-    image: prom/alertmanager:latest
+    image: docker.io/prom/alertmanager:latest
     ports:
       - "9093:9093"
     volumes:
