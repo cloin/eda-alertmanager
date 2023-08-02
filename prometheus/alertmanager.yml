@@ -1,0 +1,13 @@
+global:
+  resolve_timeout: 1m
+
+route:
+  group_by: ['alertname']
+  group_wait: 5s
+  group_interval: 30s
+  repeat_interval: 10m
+  receiver: 'webhooks'
+receivers:
+- name: 'webhooks'
+  webhook_configs:
+  - url: 'http://eda-controller:5050/prometheus'
