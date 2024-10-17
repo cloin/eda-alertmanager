@@ -2,6 +2,7 @@ version: '3'
 services:
   prometheus:
     image: docker.io/prom/prometheus:latest
+    name: prometheus
     user: root
     privileged: true
     volumes:
@@ -27,6 +28,7 @@ services:
 
   alertmanager:
     image: docker.io/prom/alertmanager:latest
+    name: alertmanager
     privileged: true
     ports:
       - "9093:9093"
