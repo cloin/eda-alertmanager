@@ -10,4 +10,4 @@ route:
 receivers:
 - name: 'webhooks'
   webhook_configs:
-  - url: 'http://eda-controller:5050/prometheus'
+  - url: 'http://aap.example.org/event-streams/api/eda/vi/external_event_stream/123412341234/post/'
