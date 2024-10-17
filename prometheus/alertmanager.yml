@@ -7,7 +7,14 @@ route:
   group_interval: 30s
   repeat_interval: 10m
   receiver: 'webhooks'
+
 receivers:
 - name: 'webhooks'
   webhook_configs:
-  - url: 'http://aap.example.org/event-streams/api/eda/vi/external_event_stream/123412341234/post/'
+  - url: 'https://aap.example.org/eda-event-streams/api/eda/v1/external_event_stream/12341234/post/'
+    http_config:
+      basic_auth:
+        username: 'your_username'
+        password: 'your_password'
+      tls_config:
+        insecure_skip_verify: true
