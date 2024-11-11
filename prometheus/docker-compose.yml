@@ -13,19 +13,6 @@ services:
     ports:
       - 9090:9090
 
-  # alertmanager:
-  #   build:
-  #     context: .
-  #     dockerfile: alertmanager-dockerfile
-  #   user: root
-  #   privileged: true
-  #   volumes:
-  #     - ./alertmanager-startup.sh:/alertmanager-startup.sh
-  #     - ./alertmanager.yml.template:/alertmanager.yml.template
-  #   entrypoint: ["/bin/sh", "/alertmanager-startup.sh"]
-  #   ports:
-  #     - 9093:9093
-
   alertmanager:
     image: docker.io/prom/alertmanager:latest
     name: alertmanager
