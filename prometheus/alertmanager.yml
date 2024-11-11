@@ -11,10 +11,4 @@ route:
 receivers:
 - name: 'webhooks'
   webhook_configs:
-  - url: 'https://aap.example.org/eda-event-streams/api/eda/v1/external_event_stream/12341234/post/'
-    http_config:
-      basic_auth:
-        username: 'your_username'
-        password: 'your_password'
-      tls_config:
-        insecure_skip_verify: true
+  - url: 'http://aap:5050/prometheus'
