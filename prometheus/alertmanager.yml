@@ -7,7 +7,6 @@ route:
   group_interval: 30s
   repeat_interval: 10m
   receiver: 'webhooks'
-
 receivers:
 - name: 'webhooks'
   webhook_configs:
