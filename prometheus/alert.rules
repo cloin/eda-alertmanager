@@ -7,4 +7,4 @@ groups:
     labels:
       severity: page
     annotations:
-      summary: "selinx disabled"
+      summary: "selinux is disabled on {{ $labels.instance }}"
